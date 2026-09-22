@@ -240,10 +240,10 @@
             <phase>validate</phase>
             <configuration>
               <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>
-              <sourceDirectories>${basedir}</sourceDirectories>
+              <sourceDirectories>${project.basedir}</sourceDirectories>
               <includes>**/*</includes>
               <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>
-              <propertyExpansion>config_loc=${basedir}/src/checkstyle/</propertyExpansion>
+              <propertyExpansion>config_loc=${project.basedir}/src/checkstyle/</propertyExpansion>
             </configuration>
           </execution>
         </executions>
@@ -353,8 +353,8 @@
             <artifactId>libsass-maven-plugin</artifactId>
             <version>${libsass.version}</version>
             <configuration>
-              <inputPath>${basedir}/src/main/scss/</inputPath>
-              <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>
+              <inputPath>${project.basedir}/src/main/scss/</inputPath>
+              <outputPath>${project.basedir}/src/main/resources/static/resources/css/</outputPath>
               <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>
             </configuration>
             <executions>
